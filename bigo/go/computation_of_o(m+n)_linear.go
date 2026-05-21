@@ -1,28 +1,6 @@
-// Algorithm to compute Linear time complexity
+// Algorithm to compute of O(m+n) Linear time complexity
 
-package main
-
-import "fmt"
-
-var (
-	rc      bool
-	element int
-	arr1    []int
-)
-
-func main() {
-	fmt.Println("Hello Algos! Welcome to BigO Complexity...")
-
-	arr1 = []int{1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 20, 21, 24, 26}
-	element = 21
-
-	rc = linearComplexity(arr1, element)
-	if rc {
-		fmt.Printf("Given element %v is found", element)
-	} else {
-		fmt.Printf("Given element %v is not found", element)
-	}
-}
+package bigo
 
 // Linear Search Operation
 // Input arr1 = []int{1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 20, 21, 24, 26}
@@ -34,11 +12,18 @@ func main() {
 // So always we will consider to worst case and try to improve/optimize that only most of the times.
 // In this case with n elements the linear search operation time complexity is O(n).
 // Space complexity here we are not store and iterate anything, so i.e O(1).
-func linearComplexity(arr1 []int, element int) bool {
+func linearComputationOfOmn(arr1 []int, arr2 []int, element int) bool {
 
 	// Iterate the arr1 to find out the given element
 	for i := 0; i < len(arr1); i++ {
 		if arr1[i] == element {
+			return true
+		}
+	}
+
+	// Iterate the arr2 to find out the given element
+	for j := 0; j < len(arr2); j++ {
+		if arr2[j] == element {
 			return true
 		}
 	}
