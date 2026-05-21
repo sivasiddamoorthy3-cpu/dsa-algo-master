@@ -1,6 +1,7 @@
 package main
 
 import (
+	"dsa-algo-master/bigo/go/complexity/linear"
 	"fmt"
 )
 
@@ -23,7 +24,8 @@ func main() {
 	fmt.Println("Enter the value of the element to be searched: ")
 	fmt.Scan(&element)
 
-	rc = linearComplexity(arr1, element)
+	fmt.Println("Welcome to BigO Linear Complexity...")
+	rc = linear.LinearComplexity(arr1, element)
 	if rc {
 		fmt.Printf("Given element %v is found", element)
 	} else {
