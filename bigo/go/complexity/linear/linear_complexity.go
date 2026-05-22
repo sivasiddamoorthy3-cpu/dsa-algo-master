@@ -20,7 +20,8 @@ func main() {
 
 	element = 21
 
-	fmt.Println("Welcome to BigO Linear Complexity...")
+	fmt.Println("========================================")
+	fmt.Println("Welcome to BigO Linear O(n) Complexity...")
 	rc = LinearComplexity(arr1, element)
 	if rc {
 		fmt.Printf("Given element %v is found", element)
@@ -28,6 +29,11 @@ func main() {
 		fmt.Printf("Given element %v is not found", element)
 	}
 
+	fmt.Println("Time Complexity for Linear: O(n)")
+	fmt.Println("Space Complexity for Linear: O(1)")
+	fmt.Println("=========================================")
+
+	fmt.Println("========================================")
 	fmt.Println("Welcome to BigO Linear O(m+n) Complexity...")
 	rc = LinearComputationOfOmn(arr1, arr2, element)
 	if rc {
@@ -35,6 +41,11 @@ func main() {
 	} else {
 		fmt.Printf("Given element %v is not found", element)
 	}
+
+	fmt.Println("Time Complexity for Linear Computation: O(m+n)")
+	fmt.Println("Space Complexity for Linear: O(1)")
+	fmt.Println("=========================================")
+
 }
 
 // Linear Search Operation
