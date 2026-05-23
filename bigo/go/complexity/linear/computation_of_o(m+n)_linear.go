@@ -1,6 +1,6 @@
 // Algorithm to compute of O(m+n) Linear time complexity
 
-package linear
+package main
 
 // Linear Search Computation of O(m+n)
 // Input arr1 = []int{1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 20, 21, 24, 26}

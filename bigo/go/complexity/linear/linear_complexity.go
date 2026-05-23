@@ -1,6 +1,6 @@
 // Algorithm to compute Linear time complexity
 
-package linear
+package main
 
 import "fmt"
 
