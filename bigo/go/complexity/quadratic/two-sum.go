@@ -33,9 +33,13 @@ func TwoSum(arr1 []int, expectedSum int) (bool, int, int) {
 // Space Complexity: O(n), because everytime with the element we are checking with the map,
 // Whether the key is present in map(we are minusing the element with expected sum), for n elements it should be iterate n times.
 func TwoSumOptimize(arr1 []int, expextedSum int) (bool, int, int) {
+	// Created the map key, value pair of int
 	sumMap := make(map[int]int)
 	for i := 0; i < len(arr1); i++ {
+		// If the expectedSum pair is there in given array, then instead of iterating additional for loop, we can get the remaining element value based on the input element value.
+		// Like finding the second element = output - first element.
 		sumMapKey := expextedSum - arr1[i]
+		// So with that second element we are checking with map as key, if it finds then return, else adding it into the map key as element and value as index.
 		if val, ok := sumMap[sumMapKey]; ok {
 			return true, i, val
 		} else {
